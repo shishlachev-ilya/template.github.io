@@ -1,0 +1,1185 @@
+@import '_popup'
+// @import '_font'
+@import '_vars'
+
+@font-face
+  font-family: 'MyriadProRegular'
+  src: url('../fonts/MyriadProRegular/MyriadProRegular.eot')
+  src: url('../fonts/MyriadProRegular/MyriadProRegular.eot') format("embedded-opentype"), url('../fonts/MyriadProRegular/MyriadProRegular.woff2') format("woff2"), url('../fonts/MyriadProRegular/MyriadProRegular.woff') format("woff"), url('../fonts/MyriadProRegular/MyriadProRegular.ttf') format("truetype"), url('../fonts/MyriadProRegular/MyriadProRegular.svg#MyriadProRegular') format("svg")
+
+@font-face
+  font-family: 'MyriadProSemibold'
+  src: url('../fonts/MyriadProSemibold/MyriadProSemibold.eot')
+  src: url('../fonts/MyriadProSemibold/MyriadProSemibold.eot') format("embedded-opentype"), url('../fonts/MyriadProSemibold/MyriadProSemibold.woff2') format("woff2"), url('../fonts/MyriadProSemibold/MyriadProSemibold.woff') format("woff"), url('../fonts/MyriadProSemibold/MyriadProSemibold.ttf') format("truetype"), url('../fonts/MyriadProSemibold/MyriadProSemibold.svg#MyriadProSemibold') format("svg")
+
+@font-face
+  font-family: 'Bitter'
+  src: url('../fonts/Bitter/Bitter.eot')
+  src: url('../fonts/Bitter/Bitter.eot') format("embedded-opentype"), url('../fonts/Bitter/Bitter.woff2') format("woff2"), url('../fonts/Bitter/Bitter.woff') format("woff"), url('../fonts/Bitter/Bitter.ttf') format("truetype"), url('../fonts/Bitter/Bitter.svg#Bitter') format("svg")
+
+ul
+	padding: 0
+	margin: 0
+	li
+		padding: 0
+		margin: 0
+		list-style: none outside none
+
+p
+	padding: 0
+	margin: 0
+
+*
+	box-sizing: border-box
+
+body
+	background: #fff
+	overflow-x: hidden
+
+.text-center
+	text-align: center
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	&:active
+		text-decoration: none
+
+.mfp-container
+	background: #072335
+	opacity: 0.8
+
+.mfp-close-btn-in 
+	.mfp-close
+		color: #fff
+		transform: scale(1.5)
+
+/* шапка */
+
+.header
+	.header__top
+		background: $header-top
+		height: 30px
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 999
+	.menu
+		padding: 5px 0
+		.menu__list
+			width: 100%
+			display: block
+			text-align: right
+			padding-right: 65px
+			font-size: 0
+			&:after
+				content: ""
+				width: 100%
+				display: inline-block
+				font-size: 0
+			.menu__item
+				display: inline-block
+				vertical-align: middle
+				margin-right: 67px
+				&:last-child
+					margin-right: 0
+				.menu__link
+					display: block
+					outline: none
+					.menu__link-icon
+						display: inline-block
+						vertical-align: middle
+						margin-right: 11px
+						width: 20px
+						height: 20px
+						border-radius: 50%
+						background: #d7e3eb
+						position: relative
+						img
+							position: absolute
+							display: block
+							top: 0
+							right: 0
+							left: 0
+							bottom: 0
+							margin: auto
+							max-width: 95%
+							max-height: 95%
+					.menu__link-text
+						display: inline-block
+						font-family: "MyriadProRegular"
+						vertical-align: middle
+						font-size: 14px
+						color: #eceff1
+						&:hover
+							color: $hover-link
+					.bordered
+						border-bottom: 1px dashed #eceff1
+						line-height: 1
+						font-family: "MyriadProSemibold"
+						&:hover
+							border-color: $hover-link
+							
+	.header__bottom
+		position: fixed
+		top: 30px
+		left: 0
+		width: 100%
+		z-index: 999
+		background: #fff
+		.logo__link
+			display: block
+			padding: 19px 0
+			.logo__pic
+				max-width: 100%
+
+		.header__schedule
+			padding: 19px 0
+			.schedule__title
+				display: inline-block
+				vertical-align: middle
+				color: $secondary
+			.schedule__day
+				display: inline-block
+				vertical-align: middle
+				text-transform: uppercase
+				color: $secondary
+
+		.nav
+			height: 80px
+			.nav__list
+				display: block
+				width: 100%
+				text-align: right
+				font-size: 0
+				&:after
+					content: ""
+					display: inline-block
+					width: 100%
+					font-size: 0
+				.nav__item
+					display: inline-block
+					height: 80px
+					line-height: 80px
+					margin-left: 48px
+					.nav__item-link
+						display: block
+						text-transform: uppercase
+						font-size: 15px
+						vertical-align: middle
+						text-decoration: none
+						font-family: "MyriadProSemibold"
+						color: $paragraf
+						&:hover
+							color: $header
+					.b-arrow
+						padding-right: 10px
+						background: url(../img/navarrow.png) no-repeat top 35px right
+					.t-arrow
+						padding-right: 10px
+						background: url(../img/t-navarrow.png) no-repeat top 35px right	
+						
+				.inner
+					position: relative
+					.inner__list
+						display: none
+						position: absolute
+						width: 270px
+						top: 101%
+						left: -15px
+						background: #fff
+						padding: 7px 0
+						border-top: 2px solid #32acfc
+						text-align: left
+						.inner__item
+							display: block
+							
+							.inner__item-link
+								display: block
+								line-height: 1
+								padding: 15px
+								font-family: "MyriadProRegular"
+								font-size: 14px
+								color: #072335
+								&:hover
+									background: $thin
+					&:hover .inner__list
+						display: block
+	
+	.new_bg
+		background: #cad1d5
+
+/* главный экран */
+
+.main__screen
+	height: 100vh
+	// margin-top: -30px
+	position: relative
+	.site__form
+		position: absolute
+		top: 48%
+		left: 50%
+		transform: translate(-50%, -50%)
+		margin-left: 28%
+		width: 25%
+		padding: 38px
+		background: $header-top
+		box-shadow: 0 0 40px 0px #031019
+		.form__head
+			padding-bottom: 32px
+			h3
+				color: #fff
+				font-family: 'Bitter'
+				font-size: 24px
+				padding: 0
+				margin: 0
+			p
+				font-family: 'MyriadProRegular'
+				color: #fff
+				font-size: 18px
+				strong
+					font-family: 'MyriadProBold'
+		.form
+			position: relative
+			.error
+				color: $hover-link
+				font-family: 'MyriadProRegular'
+				font-size: 12px
+				background: #115683
+				padding: 2px 10px
+				position: absolute
+				display: none
+				transition: all 0.5s ease
+				&:before
+					content: ""
+					position: absolute
+					top: 50%
+					right: 100%
+					transform: translateY(-50%)
+					display: block
+					border-style: solid
+					border-width: 5px 5px 5px 5px
+					border-color: transparent #115683 transparent transparent
+			.name__error
+				top: 14px
+				right: 0
+			.phone__error
+				top: 66px
+				right: 0
+			.block
+				display: block
+			::-webkit-input-placeholder 
+				color:#fff
+			::-moz-placeholder          
+				color:#fff
+			:-moz-placeholder           
+				color:#fff
+			:-ms-input-placeholder      
+				color:#fff
+			input[type="text"]:focus::-webkit-input-placeholder 
+				color: transparent
+				transition: text-indent 0.2s ease
+			input[type="text"]:focus::-moz-placeholder    
+				color: transparent
+				transition: text-indent 0.2s ease
+			input[type="text"]:focus:-moz-placeholder   
+				color: transparent
+				transition: text-indent 0.2s ease
+			input[type="text"]:focus:-ms-input-placeholder
+				color: transparent
+				transition: text-indent 0.2s ease
+			
+			input[type="text"]
+				display: block
+				width: 100%
+				padding: 15px 10px 
+				background: $header-top
+				font-size: 14px
+				color: #cbe4f4
+				font-family: 'MyriadProRegular'
+				text-transform: uppercase
+				border: none
+				border-bottom: 2px solid #115683
+				outline: none
+				&:hover
+					color: #fff
+				
+			button[type="submit"]
+				display: block
+				width: 100%
+				margin-top: 35px
+				background: #ffa229
+				padding: 22px 0
+				text-align: center
+				color: #4d3d28
+				font-size: 14px
+				font-family: "Bitter"
+				font-weight: bold
+				text-shadow: 0 1px 0px #ffbe6a
+				text-transform: uppercase
+				outline: none
+				border: none
+				border-radius: 5px
+				&:hover
+					background: #ffac39
+					color: #072335
+				&:visited
+					background: #ffa229
+					color: #072335
+	
+	.more
+		position: absolute
+		bottom: 10px
+		left: 50%
+		transform: translateX(-50%)
+		.more__link
+			display: block
+			color: #fff
+			font-size: 12px
+			font-family: 'MyriadProRegular'
+			text-transform: uppercase
+			text-decoration: none
+			border: none
+			outline: none
+			.more__pic
+				display: block
+				margin: 5px auto 0
+
+
+
+
+
+		
+
+.main__slider
+	height: 100vh
+	.wrap__item
+		padding-top: 110px
+		height: 100vh
+		position: relative 
+	.slider1
+		display: block
+		background-image: url(../img/bg1.jpg) 
+		background-position: top center
+		background-size: cover
+	.slider2
+		display: block
+		background-image: url(../img/main-bg.jpg) 
+		background-position: top 25px center
+		background-size: cover
+	.slider3
+		display: block
+		background-image: url(../img/bg3.jpg) 
+		background-position: top center
+		background-size: cover
+		
+.slider__head
+	padding-top: 180px
+	.slider__header
+		font-size: 37px
+		color: #fff
+		font-family: 'Bitter'
+		font-weight: bold
+		padding-right: 50px
+		padding-bottom: 35px
+	.slider__text
+		font-size: 18px
+		color: #fff
+		font-family: 'MyriadProRegular'
+		padding-right: 250px
+
+
+
+
+.small__slider
+	width: 65%
+	position: absolute
+	left: 50%
+	bottom: 50px
+	transform: translateX(-50%)
+	.ss__item	
+		position: relative
+		display: inline-block
+		margin: 1px
+		padding: 15px 20px 20px 20px
+		background: #115683
+		margin-top: 49px
+		border: none
+		outline: none
+		cursor: pointer
+		.ss__logo
+			position: relative
+			height: 33px
+			width: 33px
+			.ss__pic
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				max-width: 100%
+				max-height: 100%
+		.ss__name
+			color: #fff
+			font-size: 14px
+			font-family: 'Bitter'
+			text-transform: uppercase
+			padding: 14px 0
+		.ss__desc
+			display: none
+			color: #fff
+			font-size: 15px
+			font-family: 'MyriadProRegular'
+
+.slick-prev, .slick-next
+	top: 58%
+.slick-prev:before
+	content: url(../img/ss_left.png)
+.slick-next:before
+	content: url(../img/ss_right.png)
+.small__slider
+	.slick-current
+		background: #32acfc
+		margin-top: -48px
+		padding-top: 70px
+		.ss__desc
+			display: block
+
+/* преимущества */
+
+.advantages
+	padding-top: 60px
+.advantages__head
+	width: 50%
+	h2
+		font-family: 'Bitter'
+		font-weight: bold
+		color: #072335
+		font-size: 30px
+.advantages__wrap
+	position: relative
+	height: 100%
+	width: 100%
+
+.advantages__item.active
+	.advantages__link
+		.advantages__content
+			.content__text
+				color: #fff
+				background: url(../img/active_arrow.png) no-repeat center right 10px
+		.advantages__list
+			display: block
+			padding-left: 10px
+.advantages__item
+	transition: all 0.5s ease
+	margin-bottom: 40px
+	border-bottom: 1px solid #cad1d5
+	.advantages__link
+		display: block
+		height: 100%
+		width: 100%
+		padding: 15px
+		text-decoration: none
+		outline: none
+		transition: all .5s ease
+		.advantages__icon
+			height: 82px
+			width: 82px
+			position: relative
+			img
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				margin: auto
+				max-width: 100%
+				max-height: 100%
+		.advantages__content
+			padding-top: 16px
+			.content__text
+				display: block
+				padding-right: 40px
+				color: #072335
+				font-family: 'Bitter'
+				font-weight: bold
+				font-size: 14px
+				background: url(../img/arrow.png) no-repeat center right 10px
+				// background: url(../img/active_arrow.png) no-repeat center right 10px
+		.advantages__list
+			display: none
+			padding-left: 10px
+			.list__item
+				margin-top: 20px
+				font-size: 14px
+				color: #fff
+				font-family: 'MyriadProRegular'
+				position: relative
+				&:before
+					content: '\2022'
+					position: absolute
+					top: 0
+					left: -10px
+
+.active
+	background: $header-top
+	position: absolute
+	z-index: 10
+	border-bottom: none
+
+/* traning */
+.no-pad
+	padding: 0
+.traning
+	.traning__wrap
+		background: url(../img/traning-bg.jpg) no-repeat
+		background-size: cover
+		margin-left: 15px
+		margin-right: 15px
+		padding: 30px 40px
+		&:after
+			content: ""
+			display: table
+			clear: both	
+		.traning__question
+			color: #fff
+			font-family: 'Bitter'
+			font-weight: bold
+			font-size: 20px
+		.traning__content
+			font-family: 'MyriadProRegular'
+			font-size: 15px
+			color: #fff
+		.traning__link 
+			.link
+				display: block
+				width: 90%
+				margin-left: 10%
+				margin-top: 20px
+				background: #ffa229
+				padding: 22px 0
+				text-align: center
+				color: #4d3d28
+				font-size: 14px
+				font-family: "Bitter"
+				font-weight: bold
+				text-shadow: 0 1px 0px #ffbe6a
+				text-transform: uppercase
+				outline: none
+				border: none
+				border-radius: 5px
+				text-decoration: none
+				&:hover
+					background: #ffac39
+					color: #072335
+				
+/* history */
+.history
+	padding-top: 90px
+.history__head
+	.history__header
+		padding: 0
+		margin: 0
+		color: $header
+		font-size: 30px
+		font-family: 'Bitter'
+		font-weight: bold
+		padding-bottom: 25px	
+	.history__desc
+		font-size: 18px
+		color: #3e4e58
+		font-family: 'MyriadProBold'
+		line-height: 1
+
+.history__item
+	padding-left: 35px
+	padding-top: 40px
+
+	.history__year
+		color: $header
+		font-size: 50px
+		font-family: 'Bitter'
+		font-weight: bold
+		
+	.history__name
+		font-size: 15px
+		font-family: 'MyriadProBold'
+		font-weight: bold
+		color: $header
+		padding-left: 15px
+		padding-bottom: 10px
+		text-transform: uppercase	
+		&:after
+			content: ""
+			display: table
+			clear: both
+	.history__text
+		.history__par
+			padding-bottom: 20px
+			color: #3e4e58
+			font-size: 15px
+			font-family: 'MyriadProRegular'
+			padding-left: 15px
+
+	.hisroty__icon
+		float: left
+		margin-right: 40px
+.year
+		padding-left: 0
+.pt
+	padding-top: 150px
+.line
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		z-index: 20
+		left: -6px
+		top: 33%
+		width: 5px
+		height: 105%
+		border-radius: 10px
+		background: #82aac6	
+.circle
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		z-index: 10
+		width: 32px
+		height: 32px
+		background: url(../img/year__circle.png)
+		top: 23px
+		left: -55px
+
+
+/* scheme */
+.scheme
+	padding: 60px 0 0 0
+.scheme__head
+	width: 40%
+	.scheme__header
+		padding: 0
+		margin: 0
+		color: $header
+		font-size: 24px
+		font-family: 'Bitter'
+.sheme__wrap
+	background: url(../img/scheme_bg.png) top -5px left -25px
+	background-size: cover
+	padding: 40px 0 60px 0
+	&:after
+		content: ""
+		display: table
+		clear: both
+	.scheme__item
+		padding-bottom: 5px
+		.scheme__number
+			padding-bottom: 10px
+			color: $header
+			font-size: 30px
+			font-weight: bold
+			font-family: 'Bitter'
+		.scheme__text
+			// width: 70%
+			color: #3e4e58
+			font-size: 15px
+			font-family: 'MyriadProRegular'
+	.pl
+		padding-left: 180px
+	.pr
+		padding-right: 180px
+
+/* membrane */
+.membrane
+	.membrane__head
+		padding-bottom: 35px
+		.membrane__header
+			h3
+				padding: 0
+				margin: 0
+				color: $header
+				font-size: 30px
+				font-family: 'Bitter'
+	.membrane__item
+		width: 100%
+		height: 271px
+		margin-right: 1.3%
+
+		&:last-child
+			margin-right: 0
+		.membrane__item-link
+			display: block
+			position: relative
+			width: 100%
+			height: 100%
+			.membrane__item-icon
+				position: absolute
+				width: 100%
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				z-index: 50
+				transition: all .2s ease
+				img
+					display: block
+					margin: auto
+				.membrane__item-desc
+					display: block
+					text-align: center
+					padding-top: 30px
+					color: #fff
+					font-size: 16px
+					font-family: 'Bitter'
+					font-weight: bold
+					text-transform: uppercase
+			.membrane__img
+				position: absolute
+				display: block
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+		&:hover .overlay
+			opacity: 1
+		&:hover .membrane__item-icon
+			top: 60%
+		.overlay
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			// background: rgba(0,0,0, 0.5)
+			background: rgba(17, 113, 176, 0.4)
+			opacity: 0
+			
+/* description */				
+.description
+	padding-top: 160px
+	padding-bottom: 40px
+	margin-top: -125px
+	background: url(../img/molecula.jpg) top center
+	background-size: cover
+	.description__content
+		padding-top: 100px
+		.description__head
+			padding-bottom: 30px
+			margin: 0
+			color: #fff
+			font-size: 30px
+			font-family: 'Bitter'
+			font-weight: bold
+		.description__par
+			padding-bottom: 20px
+			margin: 0
+			color: #fff
+			font-size: 18px
+			font-family: 'MyriadProBold'
+		.description__text
+			color: #fff
+			font-size: 15px
+			font-family: 'MyriadProRegular'
+	.site__form
+		margin-top: 0px
+		margin-left: 53px
+		padding: 38px
+		background: $header-top
+		box-shadow: 0 0 40px 0px #031019
+		.form__head
+			padding-bottom: 32px
+			h3
+				color: #fff
+				font-family: 'Bitter'
+				font-size: 24px
+				padding: 0
+				margin: 0
+			p
+				font-family: 'MyriadProRegular'
+				color: #fff
+				font-size: 18px
+				strong
+					font-family: 'MyriadProBold'
+		.form
+			position: relative
+			.error
+				color: $hover-link
+				font-family: 'MyriadProRegular'
+				font-size: 12px
+				background: #115683
+				padding: 2px 10px
+				position: absolute
+				display: none
+				transition: all 0.5s ease
+				&:before
+					content: ""
+					position: absolute
+					top: 50%
+					right: 100%
+					transform: translateY(-50%)
+					display: block
+					border-style: solid
+					border-width: 5px 5px 5px 5px
+					border-color: transparent #115683 transparent transparent
+			.name__error
+				top: 14px
+				right: 0
+			.phone__error
+				top: 66px
+				right: 0
+			.block
+				display: block
+			::-webkit-input-placeholder 
+				color:#fff
+			::-moz-placeholder          
+				color:#fff
+			:-moz-placeholder           
+				color:#fff
+			:-ms-input-placeholder      
+				color:#fff
+			input[type="text"]:focus::-webkit-input-placeholder 
+				color: transparent
+				transition: text-indent 0.2s ease
+			input[type="text"]:focus::-moz-placeholder    
+				color: transparent
+				transition: text-indent 0.2s ease
+			input[type="text"]:focus:-moz-placeholder   
+				color: transparent
+				transition: text-indent 0.2s ease
+			input[type="text"]:focus:-ms-input-placeholder
+				color: transparent
+				transition: text-indent 0.2s ease
+			
+			input[type="text"]
+				display: block
+				width: 100%
+				padding: 15px 10px 
+				background: $header-top
+				font-size: 14px
+				color: #cbe4f4
+				font-family: 'MyriadProRegular'
+				text-transform: uppercase
+				border: none
+				border-bottom: 2px solid #115683
+				outline: none
+				&:hover
+					color: #fff
+				
+			button[type="submit"]
+				display: block
+				width: 100%
+				margin-top: 35px
+				background: #ffa229
+				padding: 22px 0
+				text-align: center
+				color: #4d3d28
+				font-size: 14px
+				font-family: "Bitter"
+				font-weight: bold
+				text-shadow: 0 1px 0px #ffbe6a
+				text-transform: uppercase
+				outline: none
+				border: none
+				border-radius: 5px
+				&:hover
+					background: #ffac39
+					color: #072335
+				&:visited
+					background: #ffa229
+					color: #072335
+
+/* footer */
+.footer
+	background: #3c4959
+	padding-top: 55px
+	padding-bottom: 25px
+.footer__item
+	.footer__header
+		.footer__head
+			margin: 0
+			margin-bottom: 20px
+			font-size: 14px
+			color: #fff
+			font-family: 'Bitter'
+			text-transform: uppercase
+.footer__list
+	.footer__list-item
+		margin: 15px 0
+		.footer__list-link
+			display: block
+			color: #cfdde7
+			font-size: 14px
+			font-family: 'MyriadProRegular'
+
+.footer__contact
+	.contact__list
+		.contact__list-item
+			display: block
+			margin-bottom: 30px
+			.contact__list-link
+				color: #fff
+				font-size: 14px
+				font-family: 'MyriadProBold'
+				font-weight: bold
+				border-bottom: 1px dashed #fff
+				text-decoration: none
+				outline: none
+				position: relative
+			.f-tel
+				position: absolute
+				top: 5px
+				left: -32px
+			.f-mail
+				position: absolute
+				top: 0px
+				left: -37px
+				
+			.f-loc
+				position: absolute
+				top: 0px
+				left: -34px
+			.contact__list-text
+				display: block
+				font-size: 14px
+				color: #fff
+				font-family: 'MyriadProRegular'
+		
+
+.footer__form
+	.form
+		position: relative
+		.error
+			color: $hover-link
+			font-family: 'MyriadProRegular'
+			font-size: 12px
+			background: #115683
+			padding: 2px 10px
+			position: absolute
+			display: none
+			transition: all 0.5s ease
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				right: 100%
+				transform: translateY(-50%)
+				display: block
+				border-style: solid
+				border-width: 5px 5px 5px 5px
+				border-color: transparent #115683 transparent transparent
+		.name__error
+			top: 14px
+			right: 0
+		.phone__error
+			top: 66px
+			right: 0
+		::-webkit-input-placeholder 
+			color:#fff
+		::-moz-placeholder          
+			color:#fff
+		:-moz-placeholder           
+			color:#fff
+		:-ms-input-placeholder      
+			color:#fff
+		input[type="text"]:focus::-webkit-input-placeholder 
+			color: transparent
+		input[type="text"]:focus::-moz-placeholder    
+			color: transparent
+		input[type="text"]:focus:-moz-placeholder   
+			color: transparent
+		input[type="text"]:focus:-ms-input-placeholder
+			color: transparent
+		input[type="text"]
+			display: block
+			width: 95%
+			padding: 15px 10px 
+			background: #3c4959
+			font-size: 14px
+			color: #fff
+			font-family: 'MyriadProRegular'
+			text-transform: uppercase
+			border: none
+			border-bottom: 2px solid #77808b
+			outline: none
+			
+		button[type="submit"]
+			display: block
+			width: 95%
+			margin-top: 35px
+			background: #3c4959
+			border: 1px solid #77808b
+			padding: 22px 0
+			text-align: center
+			color: #cfdde7
+			font-size: 14px
+			font-family: "Bitter"
+			font-weight: bold
+			text-transform: uppercase
+			outline: none
+			border-radius: 5px
+
+.footer__head-copy, .footer__head-par
+	margin: 0
+	font-size: 12px
+	color: #fff
+	font-family: 'MyriadProBold'
+	font-weight: bold
+.footer__head-par
+	padding-top: 17px
+	padding-bottom: 20px
+	border-bottom: 1px solid #5f6a77
+.footer__copy-content
+	color: #cfdde7
+	font-size: 13px
+	font-family: 'MyriadProRegular'
+	padding: 20px 0
+
+.footer__policy
+	.footer__policy-link
+		color: #cfdde7
+		font-size: 14px
+		font-family: 'MyriadProRegular'
+		text-decoration: none
+		border-bottom: 1px dashed #cfdde7
+		outline: none
+
+
+/* popup */
+#success
+	padding: 38px
+	background: #072335
+	.success__head
+		padding-bottom: 32px
+		h3
+			color: #fff
+			font-family: 'Bitter'
+			font-size: 24px
+			padding: 0
+			margin: 0
+		p
+			font-family: 'MyriadProRegular'
+			color: #fff
+			font-size: 18px
+	
+
+
+
+
+.popup__form
+	position: relative
+	margin: auto
+	background: none
+	width: 320px
+	box-shadow: none
+	padding-top: 30px
+	.form__head
+		h3
+			font-family: 'Bitter'
+			font-size: 30px
+			color: #fff
+		p
+			font-size: 18px
+			color: #fff
+			font-family: 'MyriadProRegular'
+			padding-bottom: 30px
+	.form
+		position: relative
+		::-webkit-input-placeholder 
+			color:#fff
+		::-moz-placeholder          
+			color: #cbe4f4
+		:-moz-placeholder           
+			color: #cbe4f4
+		:-ms-input-placeholder      
+			color: #cbe4f4
+		input[type="text"]:focus::-webkit-input-placeholder 
+			color: transparent
+			transition: text-indent 0.2s ease
+		input[type="text"]:focus::-moz-placeholder    
+			color: transparent
+			transition: text-indent 0.2s ease
+		input[type="text"]:focus:-moz-placeholder   
+			color: transparent
+			transition: text-indent 0.2s ease
+		input[type="text"]:focus:-ms-input-placeholder
+			color: transparent
+			transition: text-indent 0.2s ease
+		input[type='text']
+			display: block
+			width: 100%
+			background: #072335
+			border: none
+			border-bottom: 1px solid #115683
+			padding: 15px
+			color: #fff
+			font-family: 'MyriadProRegular'
+			font-size: 14px
+			text-transform: uppercase
+			outline: none
+		button[type="submit"]
+			display: block
+			width: 100%
+			margin-top: 35px
+			background: #ffa229
+			padding: 22px 0
+			text-align: center
+			color: #4d3d28
+			font-size: 14px
+			font-family: "Bitter"
+			font-weight: bold
+			text-shadow: 0 1px 0px #ffbe6a
+			text-transform: uppercase
+			outline: none
+			border: none
+			border-radius: 5px
+			&:hover
+				background: #ffac39
+				color: #072335
+			&:visited
+				background: #ffa229
+				color: #072335
+		.error
+			color: $hover-link
+			font-family: 'MyriadProRegular'
+			font-size: 12px
+			background: #115683
+			padding: 2px 10px
+			position: absolute
+			display: none
+			transition: all 0.5s ease
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				right: 100%
+				transform: translateY(-50%)
+				display: block
+				border-style: solid
+				border-width: 5px 5px 5px 5px
+				border-color: transparent #115683 transparent transparent
+		.name__error
+			top: 14px
+			right: 0
+		.phone__error
+			top: 66px
+			right: 0
+
+	.form__link
+		.form__link-item
+			display: block
+			font-size: 14px
+			color: #cbe4f4
+			font-family: 'Bitter'
+			font-weight: bold
+			width: 100%
+			text-align: center
+			padding: 22px 0
+			border: 1px solid #115683
+			text-transform: uppercase
+			outline: none
+			border-radius: 5px
+

@@ -1,0 +1,158 @@
+@media (max-width: 992px) {
+  .header .menu .menu__list .menu__item {
+    margin-right: 77px; }
+  .header .header__bottom .header__schedule {
+    padding: 28px 0; }
+  .header .header__bottom .nav {
+    display: none; }
+  .mobile__menu {
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    text-align: right; }
+  .mobile__menu .mobile__link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 16px;
+    position: relative; }
+  .mobile__menu .mobile__link span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); }
+    .mobile__menu .mobile__link span:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      top: -7px;
+      left: 0; }
+    .mobile__menu .mobile__link span:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      top: 7px;
+      left: 0; }
+  .header .header__bottom .header__schedule .schedule__title {
+    display: block; }
+  .header .header__bottom .header__schedule .schedule__day {
+    display: block; }
+  .main__screen {
+    height: 1100px; }
+  .main__slider .wrap__item {
+    height: 1100px; }
+  .slider__head {
+    padding-top: 65px;
+    text-align: center; }
+  .slider__head .slider__header {
+    font-size: 40px;
+    padding-right: 0; }
+  .slider__head .slider__text {
+    padding: 0; }
+  .main__screen .site__form {
+    width: 65%;
+    left: 50%;
+    top: 60%;
+    margin-left: 0; }
+  .small__slider {
+    width: 60%; }
+  .advantages__head {
+    width: 100%; }
+  .advantages__item.active {
+    position: relative;
+    z-index: 999;
+    width: 100%; }
+  .pt {
+    padding-top: 60px; }
+  .history__item .hisroty__icon {
+    padding: 100px 0; }
+  .history__item .history__name::after {
+    content: none; }
+  .scheme__head {
+    width: 100%;
+    padding: 0 120px;
+    text-align: center; }
+  .sheme__wrap {
+    background: url(../img/scheme_bg_3.png) no-repeat center; }
+  .scheme__item {
+    display: none; }
+  .membrane__item {
+    margin-bottom: 30px; }
+  .description .site__form {
+    width: 65%;
+    margin: 30px auto; }
+  .footer__copy-content {
+    padding-left: 20px; }
+  .mobile__nemu-list {
+    background: #fff;
+    display: none;
+    height: 100vh;
+    position: relative; }
+    .mobile__nemu-list .mobile__list {
+      padding: 70px 0;
+      text-align: center; }
+      .mobile__nemu-list .mobile__list .mobile__list-item {
+        margin: 20px 0; }
+        .mobile__nemu-list .mobile__list .mobile__list-item .mobile__list-link {
+          display: inline-block;
+          padding: 10px 0;
+          color: #072335;
+          font-size: 14px;
+          font-family: 'Bitter';
+          font-weight: bold;
+          text-transform: uppercase;
+          outline: none;
+          text-decoration: none; }
+        .mobile__nemu-list .mobile__list .mobile__list-item .m-b-arrow {
+          padding-right: 15px;
+          background: url(../img/navarrow.png) no-repeat center right; }
+  .mobile__inner__list {
+    display: none; }
+    .mobile__inner__list .mobile__inner-item .mobile__inner-link {
+      display: inline-block;
+      padding: 11px 30px;
+      outline: none;
+      text-decoration: none;
+      color: #072335;
+      font-size: 14px;
+      font-family: 'MyriadProRegular'; }
+      .mobile__inner__list .mobile__inner-item .mobile__inner-link:hover {
+        background: #cad1d5; }
+  .mobile__menu .mobile-active span {
+    background: #fff; }
+    .mobile__menu .mobile-active span:before {
+      top: 1px;
+      transform: rotate(45deg); }
+    .mobile__menu .mobile-active span:after {
+      top: 1px;
+      transform: rotate(-45deg); }
+  .description .description__content {
+    padding-top: 0; }
+  .xs-no-pad {
+    padding: 5px; }
+  .membrane__item {
+    margin-bottom: 10px; }
+  .footer {
+    padding-top: 20px; }
+  .footer__item .footer__header .footer__head {
+    text-align: center; }
+  .footer__nav .footer__list {
+    padding-left: 20%; }
+  .footer__contact .contact__list {
+    padding-left: 27%; }
+  .footer__header {
+    margin-top: 25px; }
+  .footer__copy-content {
+    padding: 0 0 20px 0; }
+  .footer__contact .contact__list .contact__list-item .f-loc {
+    top: 20px; } }
